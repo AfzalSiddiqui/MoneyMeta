@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10001 /* MoneyMateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10001; };
+		A10002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10002; };
+		A10003 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10003; };
+		A10004 /* CDCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10004; };
+		A10005 /* CDCategory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10005; };
+		A10006 /* CDTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10006; };
+		A10007 /* CDTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10007; };
+		A10008 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10008; };
+		A10009 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10009; };
+		A10010 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10010; };
+		A10011 /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10011; };
+		A10012 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10012; };
+		A10013 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10013; };
+		A10014 /* MonthlySummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10014; };
+		A10015 /* RecentTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10015; };
+		A10016 /* QuickAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10016; };
+		A10017 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10017; };
+		A10018 /* TransactionRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10018; };
+		A10019 /* AddEditTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10019; };
+		A10020 /* TransactionFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10020; };
+		A10021 /* ChartsContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10021; };
+		A10022 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10022; };
+		A10023 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10023; };
+		A10024 /* ChartPeriodPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10024; };
+		A10025 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10025; };
+		A10026 /* CategoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10026; };
+		A10027 /* AddEditCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10027; };
+		A10028 /* ColorPickerGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10028; };
+		A10029 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10029; };
+		A10030 /* CategoryIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10030; };
+		A10031 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10031; };
+		A10032 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10032; };
+		A10033 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10033; };
+		A10034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10034; };
+		A10035 /* MoneyMate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B10035; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B10001 /* MoneyMateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyMateApp.swift; sourceTree = "<group>"; };
+		B10002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B10003 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		B10004 /* CDCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B10005 /* CDCategory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDCategory+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B10006 /* CDTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTransaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B10007 /* CDTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDTransaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B10008 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		B10009 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		B10010 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
+		B10011 /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		B10012 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		B10013 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		B10014 /* MonthlySummaryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlySummaryCard.swift; sourceTree = "<group>"; };
+		B10015 /* RecentTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTransactionsView.swift; sourceTree = "<group>"; };
+		B10016 /* QuickAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickAddButton.swift; sourceTree = "<group>"; };
+		B10017 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		B10018 /* TransactionRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRowView.swift; sourceTree = "<group>"; };
+		B10019 /* AddEditTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTransactionView.swift; sourceTree = "<group>"; };
+		B10020 /* TransactionFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionFilterView.swift; sourceTree = "<group>"; };
+		B10021 /* ChartsContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsContainerView.swift; sourceTree = "<group>"; };
+		B10022 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		B10023 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		B10024 /* ChartPeriodPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartPeriodPicker.swift; sourceTree = "<group>"; };
+		B10025 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		B10026 /* CategoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRowView.swift; sourceTree = "<group>"; };
+		B10027 /* AddEditCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryView.swift; sourceTree = "<group>"; };
+		B10028 /* ColorPickerGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerGridView.swift; sourceTree = "<group>"; };
+		B10029 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		B10030 /* CategoryIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryIconView.swift; sourceTree = "<group>"; };
+		B10031 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		B10032 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		B10033 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		B10034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B10035 /* MoneyMate.xcdatamodeld */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; name = MoneyMate.xcdatamodeld; path = Models/MoneyMate.xcdatamodeld; sourceTree = "<group>"; };
+		C10001 /* MoneyMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D10001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E10001 = {
+			isa = PBXGroup;
+			children = (
+				E10002 /* MoneyMate */,
+				E10099 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E10002 /* MoneyMate */ = {
+			isa = PBXGroup;
+			children = (
+				B10001 /* MoneyMateApp.swift */,
+				B10002 /* ContentView.swift */,
+				E10003 /* Models */,
+				E10004 /* ViewModels */,
+				E10005 /* Views */,
+				E10011 /* Utilities */,
+				E10012 /* Resources */,
+			);
+			path = MoneyMate;
+			sourceTree = "<group>";
+		};
+		E10003 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B10035 /* MoneyMate.xcdatamodeld */,
+				B10003 /* CoreDataStack.swift */,
+				B10004 /* CDCategory+CoreDataClass.swift */,
+				B10005 /* CDCategory+CoreDataProperties.swift */,
+				B10006 /* CDTransaction+CoreDataClass.swift */,
+				B10007 /* CDTransaction+CoreDataProperties.swift */,
+				B10008 /* TransactionType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E10004 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B10009 /* DashboardViewModel.swift */,
+				B10010 /* TransactionViewModel.swift */,
+				B10011 /* ChartViewModel.swift */,
+				B10012 /* CategoryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E10005 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E10006 /* Dashboard */,
+				E10007 /* Transactions */,
+				E10008 /* Charts */,
+				E10009 /* Categories */,
+				E10010 /* Common */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E10006 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				B10013 /* DashboardView.swift */,
+				B10014 /* MonthlySummaryCard.swift */,
+				B10015 /* RecentTransactionsView.swift */,
+				B10016 /* QuickAddButton.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E10007 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				B10017 /* TransactionListView.swift */,
+				B10018 /* TransactionRowView.swift */,
+				B10019 /* AddEditTransactionView.swift */,
+				B10020 /* TransactionFilterView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		E10008 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				B10021 /* ChartsContainerView.swift */,
+				B10022 /* PieChartView.swift */,
+				B10023 /* BarChartView.swift */,
+				B10024 /* ChartPeriodPicker.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		E10009 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B10025 /* CategoryListView.swift */,
+				B10026 /* CategoryRowView.swift */,
+				B10027 /* AddEditCategoryView.swift */,
+				B10028 /* ColorPickerGridView.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		E10010 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B10029 /* EmptyStateView.swift */,
+				B10030 /* CategoryIconView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E10011 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B10031 /* ColorExtensions.swift */,
+				B10032 /* CurrencyFormatter.swift */,
+				B10033 /* DateFormatters.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E10012 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B10034 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E10099 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C10001 /* MoneyMate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F10001 /* MoneyMate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = G10003 /* Build configuration list for PBXNativeTarget "MoneyMate" */;
+			buildPhases = (
+				F10002 /* Sources */,
+				D10001 /* Frameworks */,
+				F10003 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoneyMate;
+			productName = MoneyMate;
+			productReference = C10001 /* MoneyMate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		H10001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					F10001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = G10001 /* Build configuration list for PBXProject "MoneyMate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E10001;
+			productRefGroup = E10099 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F10001 /* MoneyMate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F10003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10034 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F10002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10001 /* MoneyMateApp.swift in Sources */,
+				A10002 /* ContentView.swift in Sources */,
+				A10003 /* CoreDataStack.swift in Sources */,
+				A10004 /* CDCategory+CoreDataClass.swift in Sources */,
+				A10005 /* CDCategory+CoreDataProperties.swift in Sources */,
+				A10006 /* CDTransaction+CoreDataClass.swift in Sources */,
+				A10007 /* CDTransaction+CoreDataProperties.swift in Sources */,
+				A10008 /* TransactionType.swift in Sources */,
+				A10009 /* DashboardViewModel.swift in Sources */,
+				A10010 /* TransactionViewModel.swift in Sources */,
+				A10011 /* ChartViewModel.swift in Sources */,
+				A10012 /* CategoryViewModel.swift in Sources */,
+				A10013 /* DashboardView.swift in Sources */,
+				A10014 /* MonthlySummaryCard.swift in Sources */,
+				A10015 /* RecentTransactionsView.swift in Sources */,
+				A10016 /* QuickAddButton.swift in Sources */,
+				A10017 /* TransactionListView.swift in Sources */,
+				A10018 /* TransactionRowView.swift in Sources */,
+				A10019 /* AddEditTransactionView.swift in Sources */,
+				A10020 /* TransactionFilterView.swift in Sources */,
+				A10021 /* ChartsContainerView.swift in Sources */,
+				A10022 /* PieChartView.swift in Sources */,
+				A10023 /* BarChartView.swift in Sources */,
+				A10024 /* ChartPeriodPicker.swift in Sources */,
+				A10025 /* CategoryListView.swift in Sources */,
+				A10026 /* CategoryRowView.swift in Sources */,
+				A10027 /* AddEditCategoryView.swift in Sources */,
+				A10028 /* ColorPickerGridView.swift in Sources */,
+				A10029 /* EmptyStateView.swift in Sources */,
+				A10030 /* CategoryIconView.swift in Sources */,
+				A10031 /* ColorExtensions.swift in Sources */,
+				A10032 /* CurrencyFormatter.swift in Sources */,
+				A10033 /* DateFormatters.swift in Sources */,
+				A10035 /* MoneyMate.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		G10004 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		G10005 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		G10006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MoneyMate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moneymate.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		G10007 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MoneyMate;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.moneymate.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		G10001 /* Build configuration list for PBXProject "MoneyMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				G10004 /* Debug */,
+				G10005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		G10003 /* Build configuration list for PBXNativeTarget "MoneyMate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				G10006 /* Debug */,
+				G10007 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B10035 /* MoneyMate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B10036 /* MoneyMate.xcdatamodel */,
+			);
+			currentVersion = B10036 /* MoneyMate.xcdatamodel */;
+			path = MoneyMate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		B10036 /* MoneyMate.xcdatamodel */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.xcdatamodel;
+			path = MoneyMate.xcdatamodel;
+			sourceTree = "<group>";
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = H10001 /* Project object */;
+}
