@@ -2,6 +2,7 @@ import SwiftUI
 
 struct TransactionListView: View {
     @StateObject private var viewModel = TransactionViewModel()
+    @ObservedObject private var hintManager = HintManager.shared
     @State private var showingAdd = false
     @State private var showingFilter = false
     @State private var editingTransaction: CDTransaction?
@@ -16,33 +17,43 @@ struct TransactionListView: View {
                         message: "Tap + to add your first transaction."
                     )
                 } else {
-                    List {
-                        if viewModel.hasActiveFilters {
-                            HStack {
-                                Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                                    .foregroundColor(.accentColor)
-                                Text("Filters active")
+                    ZStack(alignment: .top) {
+                        List {
+                            if viewModel.hasActiveFilters {
+                                HStack {
+                                    Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                                        .foregroundColor(.accentColor)
+                                    Text("Filters active")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Button("Clear") {
+                                        viewModel.clearFilters()
+                                    }
                                     .font(.subheadline)
-                                    .foregroundColor(.secondary)
-                                Spacer()
-                                Button("Clear") {
-                                    viewModel.clearFilters()
                                 }
-                                .font(.subheadline)
                             }
-                        }
 
-                        ForEach(viewModel.filteredTransactions) { transaction in
-                            TransactionRowView(transaction: transaction)
-                                .contentShape(Rectangle())
-                                .onTapGesture {
-                                    editingTransaction = transaction
-                                }
+                            ForEach(viewModel.filteredTransactions) { transaction in
+                                TransactionRowView(transaction: transaction)
+                                    .contentShape(Rectangle())
+                                    .onTapGesture {
+                                        editingTransaction = transaction
+                                    }
+                            }
+                            .onDelete(perform: viewModel.deleteTransactions)
                         }
-                        .onDelete(perform: viewModel.deleteTransactions)
+                        .listStyle(.insetGrouped)
+                        .searchable(text: $viewModel.searchText, prompt: "Search transactions")
+
+                        HintBubble(hint: .swipeDelete)
+                            .padding(.horizontal)
+                            .padding(.top, 8)
+
+                        HintBubble(hint: .filterTip)
+                            .padding(.horizontal)
+                            .padding(.top, 60)
                     }
-                    .listStyle(.insetGrouped)
-                    .searchable(text: $viewModel.searchText, prompt: "Search transactions")
                 }
             }
             .navigationTitle("Transactions")
@@ -61,6 +72,14 @@ struct TransactionListView: View {
                         showingAdd = true
                     } label: {
                         Image(systemName: "plus")
+                    }
+                }
+            }
+            .onAppear {
+                viewModel.fetchTransactions()
+                if !viewModel.transactions.isEmpty {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        hintManager.showIfNeeded(.swipeDelete)
                     }
                 }
             }

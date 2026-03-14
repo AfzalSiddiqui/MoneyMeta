@@ -15,6 +15,13 @@ struct AddEditTransactionView: View {
 
     private var isEditing: Bool { transaction != nil }
 
+    private var matchingCategories: [CDCategory] {
+        switch type {
+        case .expense: return categoryVM.expenseCategories
+        case .income: return categoryVM.incomeCategories
+        }
+    }
+
     var body: some View {
         NavigationView {
             Form {
@@ -25,6 +32,12 @@ struct AddEditTransactionView: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                    .onChange(of: type) { _ in
+                        if let cat = selectedCategory,
+                           !matchingCategories.contains(cat) {
+                            selectedCategory = nil
+                        }
+                    }
                 }
 
                 Section("Amount") {
@@ -36,31 +49,36 @@ struct AddEditTransactionView: View {
                     }
                 }
 
-                Section("Category") {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 10) {
-                            ForEach(categoryVM.categories) { cat in
-                                VStack(spacing: 4) {
-                                    CategoryIconView(
-                                        colorHex: cat.wrappedColorHex,
-                                        icon: cat.wrappedIcon,
-                                        size: 44
-                                    )
-                                    .overlay(
-                                        Circle()
-                                            .stroke(Color.accentColor, lineWidth: selectedCategory == cat ? 2 : 0)
-                                            .frame(width: 48, height: 48)
-                                    )
-                                    Text(cat.wrappedName)
-                                        .font(.caption2)
-                                        .lineLimit(1)
-                                }
-                                .onTapGesture {
-                                    selectedCategory = cat
+                Section(type == .expense ? "Expense Category" : "Income Category") {
+                    if matchingCategories.isEmpty {
+                        Text("No categories available")
+                            .foregroundColor(.secondary)
+                    } else {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                ForEach(matchingCategories) { cat in
+                                    VStack(spacing: 4) {
+                                        CategoryIconView(
+                                            colorHex: cat.wrappedColorHex,
+                                            icon: cat.wrappedIcon,
+                                            size: 44
+                                        )
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.accentColor, lineWidth: selectedCategory == cat ? 2 : 0)
+                                                .frame(width: 48, height: 48)
+                                        )
+                                        Text(cat.wrappedName)
+                                            .font(.caption2)
+                                            .lineLimit(1)
+                                    }
+                                    .onTapGesture {
+                                        selectedCategory = cat
+                                    }
                                 }
                             }
+                            .padding(.vertical, 4)
                         }
-                        .padding(.vertical, 4)
                     }
                 }
 

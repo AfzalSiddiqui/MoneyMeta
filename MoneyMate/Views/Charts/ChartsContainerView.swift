@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ChartsContainerView: View {
     @StateObject private var viewModel = ChartViewModel()
+    @ObservedObject private var hintManager = HintManager.shared
 
     var body: some View {
         NavigationView {
@@ -27,6 +28,9 @@ struct ChartsContainerView: View {
                     }
                     .padding(.horizontal)
 
+                    HintBubble(hint: .chartNav)
+                        .padding(.horizontal)
+
                     PieChartView(slices: viewModel.categorySlices)
 
                     BarChartView(data: viewModel.monthlyData, period: $viewModel.selectedPeriod)
@@ -40,6 +44,9 @@ struct ChartsContainerView: View {
             .navigationTitle("Charts")
             .onAppear {
                 viewModel.refresh()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    hintManager.showIfNeeded(.chartNav)
+                }
             }
         }
     }

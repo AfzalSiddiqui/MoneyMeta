@@ -13,10 +13,12 @@ struct CategoryRowView: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(category.wrappedName)
                     .font(.body)
-                if category.isDefault {
-                    Text("Default")
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+                HStack(spacing: 4) {
+                    if category.isDefault {
+                        Text("Default")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
 
