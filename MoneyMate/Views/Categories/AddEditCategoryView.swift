@@ -9,12 +9,15 @@ struct AddEditCategoryView: View {
     @State private var name: String = ""
     @State private var colorHex: String = "#FF6B6B"
     @State private var icon: String = "ellipsis.circle.fill"
+    @State private var categoryType: CategoryType = .expense
 
     private let icons = [
         "fork.knife", "car.fill", "bag.fill", "doc.text.fill",
         "gamecontroller.fill", "heart.fill", "book.fill", "ellipsis.circle.fill",
         "house.fill", "gift.fill", "airplane", "music.note",
-        "pawprint.fill", "leaf.fill", "dumbbell.fill", "cup.and.saucer.fill"
+        "pawprint.fill", "leaf.fill", "dumbbell.fill", "cup.and.saucer.fill",
+        "banknote.fill", "laptopcomputer", "chart.line.uptrend.xyaxis",
+        "creditcard.fill", "calendar.badge.clock", "arrow.uturn.left.circle.fill"
     ]
 
     private var isEditing: Bool { category != nil }
@@ -22,6 +25,15 @@ struct AddEditCategoryView: View {
     var body: some View {
         NavigationView {
             Form {
+                Section("Type") {
+                    Picker("Category Type", selection: $categoryType) {
+                        ForEach(CategoryType.allCases, id: \.self) { type in
+                            Text(type.label).tag(type)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+
                 Section("Name") {
                     TextField("Category name", text: $name)
                 }
@@ -78,6 +90,7 @@ struct AddEditCategoryView: View {
                     name = category.wrappedName
                     colorHex = category.wrappedColorHex
                     icon = category.wrappedIcon
+                    categoryType = category.wrappedCategoryType
                 }
             }
         }
@@ -86,9 +99,9 @@ struct AddEditCategoryView: View {
     private func saveCategory() {
         let trimmed = name.trimmingCharacters(in: .whitespaces)
         if let category = category {
-            viewModel.updateCategory(category, name: trimmed, colorHex: colorHex, icon: icon)
+            viewModel.updateCategory(category, name: trimmed, colorHex: colorHex, icon: icon, categoryType: categoryType)
         } else {
-            viewModel.addCategory(name: trimmed, colorHex: colorHex, icon: icon)
+            viewModel.addCategory(name: trimmed, colorHex: colorHex, icon: icon, categoryType: categoryType)
         }
     }
 }

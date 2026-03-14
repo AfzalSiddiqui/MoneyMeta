@@ -1,5 +1,17 @@
 import CoreData
 
+enum CategoryType: Int16, CaseIterable {
+    case expense = 0
+    case income = 1
+
+    var label: String {
+        switch self {
+        case .expense: return "Expense"
+        case .income: return "Income"
+        }
+    }
+}
+
 extension CDCategory {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDCategory> {
         return NSFetchRequest<CDCategory>(entityName: "CDCategory")
@@ -11,12 +23,18 @@ extension CDCategory {
     @NSManaged public var icon: String?
     @NSManaged public var isDefault: Bool
     @NSManaged public var sortOrder: Int16
+    @NSManaged public var categoryType: Int16
     @NSManaged public var createdAt: Date?
     @NSManaged public var transactions: NSSet?
 
     var wrappedName: String { name ?? "Unknown" }
     var wrappedColorHex: String { colorHex ?? "#007AFF" }
     var wrappedIcon: String { icon ?? "ellipsis.circle.fill" }
+
+    var wrappedCategoryType: CategoryType {
+        get { CategoryType(rawValue: categoryType) ?? .expense }
+        set { categoryType = newValue.rawValue }
+    }
 
     var transactionArray: [CDTransaction] {
         let set = transactions as? Set<CDTransaction> ?? []
