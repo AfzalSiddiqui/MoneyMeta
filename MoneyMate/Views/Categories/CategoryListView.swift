@@ -37,7 +37,7 @@ struct CategoryListView: View {
                                 }
                             } header: {
                                 Label("Expense", systemImage: "arrow.up.circle.fill")
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.expenseRose)
                                     .font(.subheadline.weight(.semibold))
                             }
 
@@ -60,7 +60,7 @@ struct CategoryListView: View {
                                 }
                             } header: {
                                 Label("Income", systemImage: "arrow.down.circle.fill")
-                                    .foregroundColor(.green)
+                                    .foregroundColor(.incomeGreen)
                                     .font(.subheadline.weight(.semibold))
                             }
                         }

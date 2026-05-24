@@ -7,7 +7,7 @@ struct AddEditCategoryView: View {
     let category: CDCategory?
 
     @State private var name: String = ""
-    @State private var colorHex: String = "#FF6B6B"
+    @State private var colorHex: String = "#FB7185"
     @State private var icon: String = "ellipsis.circle.fill"
     @State private var categoryType: CategoryType = .expense
 
