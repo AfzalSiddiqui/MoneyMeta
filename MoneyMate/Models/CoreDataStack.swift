@@ -38,16 +38,16 @@ final class CoreDataStack: ObservableObject {
 
         // Expense categories
         let expenses: [(String, String, String)] = [
-            ("Food", "#FF6B6B", "fork.knife"),
-            ("Transport", "#4ECDC4", "car.fill"),
-            ("Shopping", "#45B7D1", "bag.fill"),
-            ("Bills", "#96CEB4", "doc.text.fill"),
-            ("Entertainment", "#FFEAA7", "gamecontroller.fill"),
-            ("Health", "#DDA0DD", "heart.fill"),
-            ("Education", "#98D8C8", "book.fill"),
-            ("EMI", "#FF8A80", "calendar.badge.clock"),
-            ("Credit Card", "#7986CB", "creditcard.fill"),
-            ("Other", "#95A5A6", "ellipsis.circle.fill")
+            ("Food", "#FB7185", "fork.knife"),
+            ("Transport", "#06B6D4", "car.fill"),
+            ("Shopping", "#8B5CF6", "bag.fill"),
+            ("Bills", "#64748B", "doc.text.fill"),
+            ("Entertainment", "#F59E0B", "gamecontroller.fill"),
+            ("Health", "#EC4899", "heart.fill"),
+            ("Education", "#3B82F6", "book.fill"),
+            ("EMI", "#F97316", "calendar.badge.clock"),
+            ("Credit Card", "#6366F1", "creditcard.fill"),
+            ("Other", "#94A3B8", "ellipsis.circle.fill")
         ]
 
         for (index, item) in expenses.enumerated() {
@@ -64,13 +64,13 @@ final class CoreDataStack: ObservableObject {
 
         // Income categories
         let incomes: [(String, String, String)] = [
-            ("Salary", "#4CAF50", "banknote.fill"),
-            ("Freelance", "#66BB6A", "laptopcomputer"),
-            ("Investments", "#26A69A", "chart.line.uptrend.xyaxis"),
-            ("Gifts", "#AB47BC", "gift.fill"),
-            ("Refunds", "#42A5F5", "arrow.uturn.left.circle.fill"),
-            ("Rental Income", "#8D6E63", "house.fill"),
-            ("Other Income", "#78909C", "plus.circle.fill")
+            ("Salary", "#10B981", "banknote.fill"),
+            ("Freelance", "#14B8A6", "laptopcomputer"),
+            ("Investments", "#0EA5E9", "chart.line.uptrend.xyaxis"),
+            ("Gifts", "#A855F7", "gift.fill"),
+            ("Refunds", "#06B6D4", "arrow.uturn.left.circle.fill"),
+            ("Rental Income", "#D4A574", "house.fill"),
+            ("Other Income", "#64748B", "plus.circle.fill")
         ]
 
         for (index, item) in incomes.enumerated() {
