@@ -64,7 +64,7 @@ final class ChartViewModel: ObservableObject {
 
             for t in transactions {
                 let name = t.category?.wrappedName ?? "Other"
-                let hex = t.category?.wrappedColorHex ?? "#95A5A6"
+                let hex = t.category?.wrappedColorHex ?? "#94A3B8"
                 let existing = categoryTotals[name] ?? (hex: hex, total: 0)
                 categoryTotals[name] = (hex: hex, total: existing.total + t.amount)
             }

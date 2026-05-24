@@ -12,7 +12,7 @@ extension Color {
         case 8:
             (a, r, g, b) = ((int >> 24) & 0xFF, (int >> 16) & 0xFF, (int >> 8) & 0xFF, int & 0xFF)
         default:
-            (a, r, g, b) = (255, 0, 122, 255)
+            (a, r, g, b) = (255, 13, 148, 136)
         }
         self.init(
             .sRGB,
@@ -22,29 +22,32 @@ extension Color {
             opacity: Double(a) / 255
         )
     }
+
+    static let incomeGreen = Color(hex: "#10B981")
+    static let expenseRose = Color(hex: "#F43F5E")
 }
 
 struct CategoryColors {
     static let all: [(name: String, hex: String)] = [
-        ("Red", "#FF6B6B"),
-        ("Coral", "#FF8A80"),
-        ("Orange", "#FFB74D"),
-        ("Amber", "#FFD54F"),
-        ("Yellow", "#FFEAA7"),
-        ("Lime", "#C5E1A5"),
-        ("Green", "#81C784"),
-        ("Teal", "#4ECDC4"),
-        ("Mint", "#98D8C8"),
-        ("Sage", "#96CEB4"),
-        ("Cyan", "#4DD0E1"),
-        ("Sky", "#45B7D1"),
-        ("Blue", "#64B5F6"),
-        ("Indigo", "#7986CB"),
-        ("Purple", "#BA68C8"),
-        ("Plum", "#DDA0DD"),
-        ("Pink", "#F48FB1"),
-        ("Rose", "#EF9A9A"),
-        ("Brown", "#A1887F"),
-        ("Grey", "#95A5A6")
+        ("Rose", "#FB7185"),
+        ("Coral", "#F97316"),
+        ("Amber", "#F59E0B"),
+        ("Lime", "#84CC16"),
+        ("Emerald", "#10B981"),
+        ("Teal", "#14B8A6"),
+        ("Cyan", "#06B6D4"),
+        ("Sky", "#0EA5E9"),
+        ("Blue", "#3B82F6"),
+        ("Indigo", "#6366F1"),
+        ("Violet", "#8B5CF6"),
+        ("Purple", "#A855F7"),
+        ("Fuchsia", "#D946EF"),
+        ("Pink", "#EC4899"),
+        ("Peach", "#FCA5A1"),
+        ("Mint", "#6EE7B7"),
+        ("Sand", "#D4A574"),
+        ("Slate", "#64748B"),
+        ("Sage", "#94A3B8"),
+        ("Stone", "#A8A29E")
     ]
 }

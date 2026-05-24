@@ -6,7 +6,7 @@ struct TransactionRowView: View {
     var body: some View {
         HStack(spacing: 12) {
             CategoryIconView(
-                colorHex: transaction.category?.wrappedColorHex ?? "#95A5A6",
+                colorHex: transaction.category?.wrappedColorHex ?? "#94A3B8",
                 icon: transaction.category?.wrappedIcon ?? "ellipsis.circle.fill"
             )
 
@@ -26,7 +26,7 @@ struct TransactionRowView: View {
             VStack(alignment: .trailing, spacing: 2) {
                 Text(CurrencyFormatter.formatSigned(transaction.amount, type: transaction.transactionType))
                     .font(.body.weight(.medium))
-                    .foregroundColor(transaction.transactionType == .income ? .green : .primary)
+                    .foregroundColor(transaction.transactionType == .income ? .incomeGreen : .primary)
                 Text(DateFormatters.shortDate.string(from: transaction.wrappedDate))
                     .font(.caption2)
                     .foregroundColor(.secondary)

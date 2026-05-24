@@ -45,14 +45,14 @@ private struct SwiftUIBarChart: View {
                     x: .value("Month", item.month),
                     y: .value("Amount", item.income)
                 )
-                .foregroundStyle(.green.opacity(0.7))
+                .foregroundStyle(Color.incomeGreen.opacity(0.7))
                 .position(by: .value("Type", "Income"))
 
                 BarMark(
                     x: .value("Month", item.month),
                     y: .value("Amount", item.expense)
                 )
-                .foregroundStyle(.red.opacity(0.7))
+                .foregroundStyle(Color.expenseRose.opacity(0.7))
                 .position(by: .value("Type", "Expense"))
             }
         }
@@ -73,11 +73,11 @@ private struct FallbackBarChart: View {
                 VStack(spacing: 4) {
                     HStack(alignment: .bottom, spacing: 2) {
                         RoundedRectangle(cornerRadius: 2)
-                            .fill(Color.green.opacity(0.7))
+                            .fill(Color.incomeGreen.opacity(0.7))
                             .frame(width: 12, height: max(2, CGFloat(item.income / maxValue) * 140))
 
                         RoundedRectangle(cornerRadius: 2)
-                            .fill(Color.red.opacity(0.7))
+                            .fill(Color.expenseRose.opacity(0.7))
                             .frame(width: 12, height: max(2, CGFloat(item.expense / maxValue) * 140))
                     }
                     Text(item.month)
