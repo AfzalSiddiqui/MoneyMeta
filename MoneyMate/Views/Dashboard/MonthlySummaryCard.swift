@@ -23,11 +23,11 @@ struct MonthlySummaryCard: View {
             }
 
             HStack(spacing: 0) {
-                SummaryItem(title: "Income", amount: viewModel.totalIncome, color: .green)
+                SummaryItem(title: "Income", amount: viewModel.totalIncome, color: .incomeGreen)
                 Divider().frame(height: 40)
-                SummaryItem(title: "Expenses", amount: viewModel.totalExpenses, color: .red)
+                SummaryItem(title: "Expenses", amount: viewModel.totalExpenses, color: .expenseRose)
                 Divider().frame(height: 40)
-                SummaryItem(title: "Balance", amount: viewModel.balance, color: viewModel.balance >= 0 ? .green : .red)
+                SummaryItem(title: "Balance", amount: viewModel.balance, color: viewModel.balance >= 0 ? .incomeGreen : .expenseRose)
             }
         }
         .padding()
